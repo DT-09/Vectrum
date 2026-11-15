@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101311"><meta name="description" content="VECTRUM maps software change to compatibility risk. Deterministic contract analysis for evolving systems.">
+<title>VECTRUM — Compatibility Intelligence</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="#"><b>V</b> VECTRUM</a><nav><a href="#engine">Engine</a><a href="#method">Method</a><a href="#scope">Scope</a><a class="repo" href="https://github.com/DT-09/Vectrum">Source ↗</a></nav></header>
+<main>
+<section class="hero"><div class="eyebrow">SOFTWARE CHANGE INTELLIGENCE / DT—09</div><h1>Change is inevitable.<br><i>Surprises aren't.</i></h1><p>Understand the compatibility consequences of a contract change before it moves downstream.</p><div class="actions"><a class="primary" href="https://github.com/DT-09/Vectrum">Explore the engine ↗</a><a class="secondary" href="#method">How it works ↓</a></div><div class="foot"><span>DETERMINISTIC BY DESIGN</span><span>RUST CORE · LOCAL FIRST · MACHINE READABLE</span></div></section>
+<section id="engine"><div class="eyebrow">01 / THE ENGINE</div><h2>Not another diff viewer.</h2><p class="intro">VECTRUM turns two contract snapshots into a structured compatibility assessment. Explicit rules classify known risks; uncertain changes remain review-required.</p><div class="grid"><article><small>01</small><h3>Structural change</h3><p>Identify additions, removals and modified contract definitions.</p></article><article><small>02</small><h3>Compatibility</h3><p>Separate breaking changes from compatible additions and uncertain modifications.</p></article><article><small>03</small><h3>Downstream impact</h3><p>Traverse declared dependencies to surface direct and transitive consumers.</p></article><article><small>04</small><h3>Evidence</h3><p>Return machine-readable findings with before/after context and explicit limitations.</p></article></div></section>
+<section class="dark" id="method"><div><div class="eyebrow">02 / THE METHOD</div><h2>Evidence before assurance.</h2><p>Normalize. Compare. Classify. Trace. Report.</p></div><pre><span>$</span> vectrum compare \
+  --baseline old.json \
+  --candidate new.json \
+  --graph dependencies.json
+
+<span class="muted">→</span> normalized contract snapshots
+<span class="muted">→</span> deterministic structural analysis
+<span class="muted">→</span> dependency impact traversal
+<span class="muted">→</span> evidence-backed JSON report
+
+<span class="accent">BREAKING</span>  classification
+<span class="muted">REPORT</span>    machine-readable</pre></section>
+<section id="scope"><div class="eyebrow">03 / HONEST SCOPE</div><h2>Clear boundaries.<br><i>No invented certainty.</i></h2><div class="scope"><div><h3>Supported</h3><p>JSON · JSON Schema-like JSON · OpenAPI JSON · dependency graph JSON · Rust CLI · JSON reports</p></div><div><h3>Not claimed</h3><p>YAML · Protobuf · SQL DDL · complete reference resolution · runtime simulation · automatic dependency discovery</p></div></div></section>
+</main>
+<footer><a class="brand" href="#"><b>V</b> VECTRUM</a><span>COMPATIBILITY INTELLIGENCE / DT—09</span><a href="https://github.com/DT-09/Vectrum">SOURCE ↗</a></footer>
+</body></html>

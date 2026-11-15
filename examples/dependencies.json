@@ -1,0 +1,1 @@
+{"nodes":["inventory-api","checkout-service","web-store"],"edges":[{"from":"checkout-service","to":"inventory-api"},{"from":"web-store","to":"checkout-service"}]}

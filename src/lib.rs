@@ -110,7 +110,7 @@ fn classify(a:&Value,b:&Value)->(ChangeKind,Compatibility,String,String){
         if x.iter().any(|v|!y.contains(v)){return(ChangeKind::Modified,Compatibility::Breaking,"Allowed values narrowed".into(),"Candidate removes one or more previously allowed enum values.".into());}
     }
     let old_req:BTreeSet<&str>=a.get("required").and_then(Value::as_array).into_iter().flatten().filter_map(Value::as_str).collect();
-    let new_req:BTreeSet<&str>=b.get("required").and_then(Value::as_array).into_iter().flatten().filter_map(Value::as_str).collect;
+    let new_req:BTreeSet<&str>=b.get("required").and_then(Value::as_array).into_iter().flatten().filter_map(Value::as_str).collect();
     if new_req.difference(&old_req).next().is_some(){return(ChangeKind::Modified,Compatibility::Breaking,"New required field introduced".into(),"Candidate requires a field not required by baseline.".into());}
     if b.get("deprecated")==Some(&Value::Bool(true))&&a.get("deprecated")!=b.get("deprecated"){
         return(ChangeKind::Modified,Compatibility::ReviewRequired,"Element deprecated".into(),"Deprecation needs a consumer migration policy.".into());
